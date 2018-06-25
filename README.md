@@ -1,3 +1,13 @@
+# nvme-cli with user-ioctl
+
+This gives nvme-cli ability to communicate with SPDK through unix domain socket by
+a simple transport protocol.
+It needs the user-ioctl library in A. https://github.com/dong-liuliu/spdk/tree/xliu2/user-ioctl
+and its corresponding spdk should be B.  https://github.com/dong-liuliu/spdk/tree/xliu2/ioctl-abstract
+so user should rebase A on top of B, then compile SPDK and nvme-cli
+
+Complie nvme-cli with UIOCTL=1 and SPDK_DIR="<spdk_path>"
+
 # nvme-cli
 NVM-Express user space tooling for Linux.
 
